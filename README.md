@@ -1,5 +1,7 @@
 # 台灣行政機關辦公日曆爬蟲系統
 
+![JSDelivr](https://data.jsdelivr.com/v1/package/gh/jacktdry/TaiwanCalendar/badge)
+
 這是一個以Vibe Coding製作的自動化爬蟲系統，用於從台灣政府開放資料平台下載行政機關辦公日曆資料，並將CSV格式轉換為結構化的JSON格式。
 
 ## 資料來源
