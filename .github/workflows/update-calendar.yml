@@ -2,26 +2,12 @@ name: 台灣行政機關辦公日曆自動更新
 
 # 觸發條件
 on:
+  push:
   # 每月1號 UTC 00:00 執行 (台灣時間上午8點)
   schedule:
     - cron: "0 0 1 * *"
-
   # 支援手動觸發
   workflow_dispatch:
-    inputs:
-      force_update:
-        description: "強制更新所有檔案（忽略已存在檔案）"
-        required: false
-        default: "false"
-        type: choice
-        options:
-          - "true"
-          - "false"
-
-# 設定權限
-permissions:
-  contents: write
-  actions: read
 
 jobs:
   update-calendar:
@@ -62,7 +48,7 @@ jobs:
           python main.py
         env:
           PYTHONUNBUFFERED: 1
-          FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+          FORCE_UPDATE: 'false'
 
       # 6. 檢查是否有檔案變更
       - name: 檢查檔案變更
