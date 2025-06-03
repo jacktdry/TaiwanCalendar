@@ -9,11 +9,20 @@ on:
   # 支援手動觸發
   workflow_dispatch:
 
+# 設定最小權限原則 - 僅授予必要權限
+permissions:
+  contents: write    # 僅授予內容寫入權限，用於提交和推送檔案
+  actions: read      # 僅授予 actions 讀取權限
+
 jobs:
   update-calendar:
     name: 更新台灣辦公日曆資料
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    # Job 層級權限設定
+    permissions:
+      contents: write      # 需要寫入檔案內容
+      actions: read        # 需要讀取 actions
 
     steps:
       # 1. 檢出程式碼
@@ -38,8 +47,8 @@ jobs:
       # 4. 設定Git使用者資訊
       - name: 設定Git使用者資訊
         run: |
-          git config --local user.email "jacktdry@gmail.com"
-          git config --local user.name "jacktdry"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
 
       # 5. 執行爬蟲程式
       - name: 執行台灣辦公日曆爬蟲
@@ -94,7 +103,7 @@ jobs:
       # 8. 推送變更到遠端倉庫
       - name: 推送變更到GitHub
         if: steps.check_changes.outputs.has_changes == 'true'
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
