@@ -1,6 +1,8 @@
 # 台灣行政機關辦公日曆爬蟲系統
 
-[![](https://data.jsdelivr.com/v1/package/gh/jacktdry/TaiwanCalendar/badge)](https://www.jsdelivr.com/package/gh/jacktdry/TaiwanCalendar)
+[![jsDelivr Package](https://data.jsdelivr.com/v1/package/gh/jacktdry/TaiwanCalendar/badge)](https://www.jsdelivr.com/package/gh/jacktdry/TaiwanCalendar)
+
+中文版 ｜ [English version](./README.en.md)
 
 這是一個以Vibe Coding製作的自動化爬蟲系統，用於從台灣政府開放資料平台下載行政機關辦公日曆資料，並將CSV格式轉換為結構化的JSON格式。
 
@@ -104,4 +106,8 @@ python converter.py
 
 ## 授權
 
-本專案採用 MIT 授權條款。
+本專案原始碼採用 MIT License 授權，資料內容則依據 [政府資料開放授權條款-第1版](https://data.gov.tw/license) 提供使用。詳見 [LICENSE](./LICENSE) 及 [English License](./LICENSE.en)。
+
+- 原始碼：可自由使用、複製、修改、散布，詳見 MIT 條款。
+- 資料：可自由使用、改作、重製及散布，須註明來源且不得歪曲原意。
+- 兩者皆不得違反現行法令，且不負任何明示或默示之擔保責任。

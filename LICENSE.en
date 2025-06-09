@@ -1,22 +1,22 @@
-【政府資料開放授權條款-第1版】
+【Government Open Data License, Version 1.0】
 
-本專案資料依據「政府資料開放授權條款-第1版」(https://data.gov.tw/license) 提供使用。
+The data in this project is provided under the "Government Open Data License, Version 1.0" (https://data.gov.tw/license).
 
-本授權條款重點如下：
-1. 你可以自由使用、改作、重製及散布本資料。
-2. 使用時請註明資料來源，不得歪曲原意。
-3. 不得違反現行法令。
-4. 本資料不負任何明示或默示之擔保責任。
+Key points of this license:
+1. You are free to use, adapt, reproduce, and distribute this data.
+2. Please attribute the data source and do not distort the original meaning.
+3. Do not violate any applicable laws.
+4. The data is provided without any express or implied warranties.
 
-完整條款請參閱官方網站：https://data.gov.tw/license
+For the full license text, please refer to the official website: https://data.gov.tw/license
 
-English version: [LICENSE.en](./LICENSE.en)
+中文版: [LICENSE](./LICENSE)
 
 ---
 
-【MIT 授權條款】
+【MIT License】
 
-本專案原始碼採用 MIT License 授權，允許自由使用、複製、修改、合併、發行、散布、再授權及/或販售本軟體及其副本，並允許被授權人提供本軟體給其他人，條件如下：
+The source code of this project is licensed under the MIT License, which permits free use, copying, modification, merging, publishing, distribution, sublicensing, and/or selling copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 MIT License
 
