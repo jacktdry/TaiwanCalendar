@@ -1,0 +1,21 @@
+name: 保持 Workflow 活性
+
+on:
+  schedule:
+    # 每週一 UTC 00:00 執行 (台灣時間上午8點)
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  keepalive:
+    name: 保持 Workflow 活性
+    runs-on: ubuntu-latest
+    steps:
+      - name: 檢出程式碼
+        uses: actions/checkout@v4
+
+      - name: 保持 Workflow 活性
+        uses: gautamkrishnar/keepalive-workflow@v1
